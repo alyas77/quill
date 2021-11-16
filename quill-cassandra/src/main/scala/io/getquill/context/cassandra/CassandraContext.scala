@@ -12,6 +12,7 @@ trait CassandraContext[N <: NamingStrategy]
   extends Context[CqlIdiom, N]
   with Encodings
   with UdtMetaDsl
+  with TokensDsl
   with Ops {
 
   implicit def optionDecoder[T](implicit d: Decoder[T]): Decoder[Option[T]]
